@@ -1,14 +1,23 @@
+#Practical 6 : Identify vulnerabilities in code using bandit and fix them
+#using Github copilot
 import sqlite3
 
-conn = sqlite3.connect("DB.sqlite")
+#------Code with vulnerability-------0
+# def get_username(name):
+#     conn = sqlite3.connect("db.sqlite")
+#     cursor = conn.cursor()
+#     cursor.execute("SELECT * FROM user WHERE name = _+name+_")
+
+def get_username(name):
+    conn = sqlite3.connect("db.sqlite")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM user WHERE name = ?", (name,))
+    row = cursor.fetchone()
+    conn.close()
+    return row
+
+#windsurf rectified code
 cursor = conn.cursor()
+cursor.execute("SELECT * FROM user WHERE name = %s", (name,))  # use ? for sqlite3
 
-name = "Krishna"
 
-query = "SELECT * FROM user WHERE name = ?"
-cursor.execute(query, (name,))
-
-for row in cursor:
-    print(row)
-
-conn.close()
