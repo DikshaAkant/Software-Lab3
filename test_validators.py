@@ -1,8 +1,5 @@
 import unittest
-
 from validators import is_valid_email
-
-
 class TestEmailValidator(unittest.TestCase):
     def test_valid_emails(self):
         valid = [
@@ -47,7 +44,6 @@ class TestEmailValidator(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
     def test_additional_edge_cases(self):
         cases = {
             # accepted by the current regex

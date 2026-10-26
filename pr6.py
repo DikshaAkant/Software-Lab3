@@ -2,11 +2,8 @@ import os
 import shlex
 import sqlite3
 from pathlib import Path
-
-
 # Prefer environment variables over hardcoded secrets in production.
 app_password = os.environ.get("APP_PASSWORD")
-
 
 def find_user(username):
     conn = sqlite3.connect("users.db")
@@ -46,12 +43,9 @@ def read_file(filename):
 
     return safe_path.read_text(encoding="utf-8")
 
-
 username = input("Username: ")
 print(find_user(username))
-
 command = input("Command: ")
 print(run_command(command))
-
 filename = input("Filename: ")
 print(read_file(filename))

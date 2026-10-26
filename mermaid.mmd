@@ -1,0 +1,34 @@
+    STUDENT {
+        int student_id PK
+        string name
+        string email
+        string department
+        string year
+    }
+
+    COURSE {
+        int course_id PK
+        string course_name
+        string course_code
+        int credits
+        int faculty_id FK
+    }
+
+    FACULTY {
+        int faculty_id PK
+        string name
+        string department
+        string designation
+    }
+
+    STUDENT ||--o{ ENROLLMENT : enrolls
+    COURSE ||--o{ ENROLLMENT : includes
+    FACULTY ||--o{ COURSE : teaches
+
+    ENROLLMENT {
+        int enrollment_id PK
+        int student_id FK
+        int course_id FK
+        string semester
+        string grade
+    }

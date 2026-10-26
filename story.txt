@@ -1,0 +1,10 @@
+EXPERIMENT 8: AI-BASED CONVERSION OF REQUIREMENTS INTO USER STORIES
+
+1. SRS REQUIREMENTS
+
+Library Management System:
+- Students can search for books.
+- Students can borrow available books.
+- Students can return borrowed books.
+- Students can view the due date.
+- Students cannot borrow unavailable books.
