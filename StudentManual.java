@@ -40,9 +40,9 @@ public class StudentManual {
 
     public static void main(String[] args) {
         long start = System.nanoTime();
-        StudentMan s1 = new StudentMan(1, "Rasika", 45);
-        StudentMan s2 = new StudentMan(2, "Atharva", 44);
-        StudentMan s3 = new StudentMan(3, "Payal", 47);
+        StudentMan s1 = new StudentMan(1, "Ram", 45);
+        StudentMan s2 = new StudentMan(2, "Radha", 44);
+        StudentMan s3 = new StudentMan(3, "Krishna", 47);
 
         System.out.println(s1.id + " " + s1.name + " " + s1.marks);
         System.out.println(s2.id + " " + s2.name + " " + s2.marks);
