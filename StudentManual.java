@@ -1,7 +1,5 @@
 public class StudentManual {
-
     static class StudentMan {
-    
         int id;
         String name;
         int marks;
@@ -11,38 +9,31 @@ public class StudentManual {
             this.name = name;
             this.marks = marks;
         }
-
         public int getId(){
             return id;
         }
-
         public void setID(int id){
             this.id = id;
         }
-
         public String getName() {
             return name;
         }
-
         public void setName(String name) {
             this.name = name;
         }
-
         public int getMarks() {
             return marks;
         }
-
         public void setMarks(int marks) {
             this.marks = marks;
         }
-
     }
 
     public static void main(String[] args) {
         long start = System.nanoTime();
-        StudentMan s1 = new StudentMan(1, "Ram", 45);
-        StudentMan s2 = new StudentMan(2, "Radha", 44);
-        StudentMan s3 = new StudentMan(3, "Krishna", 47);
+        StudentMan s1 = new StudentMan(1, "Riya", 45);
+        StudentMan s2 = new StudentMan(2, "Abhay", 44);
+        StudentMan s3 = new StudentMan(3, "Priya", 47);
 
         System.out.println(s1.id + " " + s1.name + " " + s1.marks);
         System.out.println(s2.id + " " + s2.name + " " + s2.marks);
@@ -50,8 +41,6 @@ public class StudentManual {
 
         long end = System.nanoTime();
         long duration = (end - start)/1000;
-
         System.out.println("Duration: " + duration + " ms");
-
     }
 }
